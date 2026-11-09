@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 24px 16px;
+  background: #1b0613;
+  color: #ffe6ec;
+  font-family: Georgia, serif;
+  text-align: center;
+}
+
+.polaroid {
+  background: white;
+  width: 260px;
+  margin: 24px auto;
+  padding: 14px 14px 10px 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transform: rotate(-3deg);
+}
+
+.polaroid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.polaroid figcaption {
+  color: #333;
+  font-family: "Brush Script MT", cursive;
+  font-size: 24px;
+  padding: 14px 0 6px 0;
+}
