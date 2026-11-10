@@ -28,4 +28,207 @@ body {
   font-family: "Brush Script MT", cursive;
   font-size: 24px;
   padding: 14px 0 6px 0;
+
+}
+
+/* título da seção */
+h2 {
+  font-family: "Brush Script MT", cursive;
+  font-weight: normal;
+  font-size: 42px;
+  color: #ff7a93;
+  text-shadow: 0 0 22px rgba(255, 70, 110, 0.55);   /* brilho rosa */
+  margin-bottom: 18px;
+}
+
+/* as 4 caixinhas lado a lado */
+.contador {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);   /* 4 colunas iguais */
+  gap: 10px;                               /* espaço entre as caixas */
+  max-width: 420px;
+  margin: 0 auto;                          /* centraliza */
+}
+
+/* cada caixinha */
+.caixa {
+  padding: 14px 4px;
+  border: 1px solid rgba(255, 122, 147, 0.3);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* o número */
+.caixa strong {
+  display: block;
+  font-size: 32px;
+  color: #ff7a93;
+  text-shadow: 0 0 18px rgba(255, 70, 110, 0.6);
+  font-variant-numeric: tabular-nums;      /* números com largura igual, sem tremer */
+}
+
+/* a palavra embaixo (dias, horas...) */
+.caixa span {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #e9b4c2;
+}
+section {
+  max-width: 480px;
+  margin: 30px auto;                              /* centraliza e dá espaço em cima e embaixo */
+  padding: 28px 20px;                             /* espaço entre a borda e o conteúdo */
+  border: 1px solid rgba(255, 122, 147, 0.4);     /* a borda, no mesmo rosa dos números */
+  border-radius: 22px;                            /* cantos arredondados */
+  background: rgba(22, 6, 15, 0.58);              /* fundo um pouco mais escuro que a página */
+  box-shadow: 0 0 25px rgba(255, 70, 110, 0.2);   /* brilho rosa suave em volta */
+  box-sizing: border-box;                         /* faz o tamanho contar a borda e o espaço */
+}
+/* a caixa do álbum, com a mesma borda das outras seções */
+#album {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 28px 20px;
+  border: 1px solid rgba(255, 122, 147, 0.4);
+  border-radius: 22px;
+  background: rgba(22, 6, 15, 0.58);
+  box-shadow: 0 0 25px rgba(255, 70, 110, 0.2);
+  box-sizing: border-box;
+}
+
+/* coloca as polaroids lado a lado e quebra de linha quando não couber */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* dentro do álbum, ajusta a polaroid */
+.galeria .polaroid {
+  margin: 0;                       /* o espaço agora vem do "gap" acima */
+  transition: transform 0.3s;
+}
+
+/* as de número par se inclinam para o lado oposto */
+.galeria .polaroid:nth-child(even) {
+  transform: rotate(3deg);
+}
+
+/* ao passar o mouse, a foto endireita e aumenta um pouco */
+.galeria .polaroid:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+#livro-secao {
+  text-align: center;
+  padding: 20px 0 40px;
+  overflow-x: hidden;           /* evita barra de rolagem lateral quando o livro desliza */
+}
+
+.dica {
+  font-size: 15px;
+  color: #e9b4c2;
+}
+
+/* o livro: largura de duas páginas */
+.livro {
+  --pagina: min(42vw, 260px);                /* largura de UMA página */
+  width: calc(var(--pagina) * 2);
+  height: calc(var(--pagina) * 1.35);
+  margin: 30px auto;
+  position: relative;
+  perspective: 1800px;                       /* dá o efeito 3D */
+  transition: transform 0.8s;
+}
+
+/* fechado, o livro desliza para ficar centralizado na tela */
+.livro.fechado   { transform: translateX(-25%); }
+.livro.terminado { transform: translateX(25%); }
+
+/* cada folha fica na metade direita e vira em volta da lombada (borda esquerda) */
+.folha {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  cursor: pointer;
+}
+.folha.virada {
+  transform: rotateY(-180deg);
+}
+
+/* cada lado da folha */
+.face {
+  position: absolute;
+  inset: 0;
+  padding: 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: #fffaf3;                       /* cor do papel */
+  color: #333;
+  overflow: hidden;
+  backface-visibility: hidden;               /* esconde o lado de trás da folha */
+  -webkit-backface-visibility: hidden;
+}
+.frente {
+  border-radius: 2px 12px 12px 2px;
+  box-shadow: inset 6px 0 10px -6px rgba(0, 0, 0, 0.35);    /* sombra perto da lombada */
+}
+.verso {
+  transform: rotateY(180deg);                /* o verso já começa virado */
+  border-radius: 12px 2px 2px 12px;
+  box-shadow: inset -6px 0 10px -6px rgba(0, 0, 0, 0.35);
+}
+
+/* foto e legenda dentro da página */
+.face img {
+  display: block;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  object-fit: cover;                         /* corta a foto para caber, sem esticar */
+}
+.face p {
+  margin: 0;
+  padding: 8px 0 2px;
+  font-family: "Brush Script MT", cursive;
+  font-size: 18px;
+}
+
+/* capa e contracapa */
+.capa {
+  background: linear-gradient(135deg, #7a1b3f, #3b0c1f);
+  color: #ffd6e0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.capa h3 {
+  margin: 0;
+  font-family: "Brush Script MT", cursive;
+  font-weight: normal;
+  font-size: 34px;
+}
+.capa p {
+  font-size: 28px;
+}
+
+/* botões Voltar e Avançar */
+.controles button {
+  margin: 0 6px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ff7a93;
+  background: transparent;
+  border: 1px solid rgba(255, 122, 147, 0.6);
+  border-radius: 999px;
+  cursor: pointer;
+}
+.controles button:hover {
+  background: rgba(255, 122, 147, 0.15);
 }
