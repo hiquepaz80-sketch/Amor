@@ -1,179 +1,178 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nossa história</title>
+  <meta name="robots" content="noindex, nofollow">
+  <title>♥</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+    }
 
-  <!-- Liga o arquivo de estilo (o visual fica lá, em css/style.css) -->
-  <link rel="stylesheet" href="style.css">
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      box-sizing: border-box;
+      text-align: center;
+      color: #ffe6ec;
+      font-family: Georgia, serif;
+      background: radial-gradient(ellipse at 50% 35%, #3b0c1f 0%, #1b0613 45%, #07030a 100%);
+    }
+
+    .coracao {
+      font-size: 56px;
+      color: #ff7a93;
+      text-shadow: 0 0 26px rgba(255, 70, 110, .8);
+      animation: batida 1.4s ease-in-out infinite;
+    }
+
+    h1 {
+      margin: 14px 0 22px;
+      font-family: "Brush Script MT", cursive;
+      font-weight: normal;
+      font-size: clamp(30px, 8vw, 42px);
+      color: #ff7a93;
+      text-shadow: 0 0 22px rgba(255, 70, 110, .55);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 13px 16px;
+      font-size: 18px;
+      text-align: center;
+      color: #ffe6ec;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 122, 147, .5);
+      border-radius: 999px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #ff7a93;
+      box-shadow: 0 0 18px rgba(255, 70, 110, .35);
+    }
+
+    button {
+      padding: 12px 30px;
+      font-size: 17px;
+      color: #ff7a93;
+      background: transparent;
+      border: 1px solid rgba(255, 122, 147, .7);
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: rgba(255, 122, 147, .15);
+    }
+
+    .erro {
+      min-height: 22px;
+      margin: 6px 0 0;
+      font-size: 15px;
+      color: #ff9fb3;
+    }
+
+    .dica {
+      margin: 14px 0 0;
+      font-size: 14px;
+      color: #e9b4c2;
+      font-style: italic;
+    }
+
+    .tremer {
+      animation: tremer .4s;
+    }
+
+    @keyframes batida {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.15);
+      }
+    }
+
+    @keyframes tremer {
+
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+
+      25% {
+        transform: translateX(-8px);
+      }
+
+      75% {
+        transform: translateX(8px);
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="coracao">♥</div>
+  <h1>Esse site é só para uma pessoa especial</h1>
+  <form id="f" autocomplete="off">
+    <input id="s" type="password" placeholder="Digite a senha" aria-label="Senha" autocomplete="off"
+      autocapitalize="off">
+    <button type="submit" id="b">Entrar</button>
+  </form>
+  <p class="erro" id="e"></p>
+  <p class="dica">Uma dica: algo que só nós dois sabemos ♥</p>
 
-  <h1>Nossa história</h1>
-
-  <!-- ===== SEÇÃO: TEMPO JUNTOS ===== -->
-  <section id="tempo-juntos">
-    <h2>Estamos juntos há</h2>
-
-    <!-- A foto com efeito polaroid -->
-    <figure class="polaroid">
-      <!-- TROQUE "foto-exemplo.svg" pelo nome da sua foto (que fica na pasta "fotos") -->
-      <img src="foto_pedido.png" alt="Foto de nós dois">
-      <!-- TROQUE o texto da legenda -->
-      <figcaption>Nós dois ♥</figcaption>
-    </figure>
-
-    <!-- O contador aparece aqui (o código lá embaixo preenche este texto) -->
-    <div class="contador">
-        <div class="caixa"><strong id="dias">0</strong><span>dias</span></div>
-        <div class="caixa"><strong id="horas">0</strong><span>horas</span></div>
-        <div class="caixa"><strong id="minutos">0</strong><span>min</span></div>
-        <div class="caixa"><strong id="segundos">0</strong><span>seg</span></div>
-</div>
-  </section>
-  <!--section da história-->
-  <section id="nossa-historia">
-  <h2>Nossa história</h2>
-
-  <h3>O match</h3>
-  <p>Tudo começou em um aplicativozinho onde, sinceramente, eu não estava botando nenhuma fé de que eu realmente acharia alguém, até que de repente — <strong>BOOM!</strong> — deu match. Quando eu vi a sua foto pela primeira vez, olhei e dei um grito: <em>"O QUÊ???"</em>, sem acreditar que a mulher mais linda do mundo inteiro tinha curtido o meu perfil.</p>
-
-  <p>Então eu, muito nervoso e empolgado (principalmente nervoso), preparei a minha melhor cantada para te conquistar. Você riu, e logo eu pensei: <em>"Caralho, funcionou!"</em>. Foi aí que começamos a conversar, e eu fui me apaixonando cada vez mais por você.</p>
-
-  <h3>Querendo te ver</h3>
-  <p>Eu queria muito te ver e te conhecer pessoalmente, mas às vezes faltava dinheiro, eu tinha um compromisso religioso e, além disso, ficaria de resguardo durante 8 dias (se não me engano kkkkkkk). Eu não podia nem sair com você para beber e muito menos te beijar. Até que, passado esse tempo, tomei a decisão de que, mesmo sendo uma coisa simples, eu queria ir te ver e te conhecer pessoalmente.</p>
-
-  <h3>Nosso primeiro encontro</h3>
-  <p>Foi o dia em que fui lá determinado e mandei mensagem perguntando se você gostava de bolacha e energético, e perguntei os sabores kkkkkkkk. Eu lembro que, quando fui te encontrar, sentia meu estômago revirar de tanta ansiedade. Eu estava muito nervoso, trêmulo, te mandando mensagem, e você acabou ficando mais nervosa também kkkkkkkkkk. Lembro até hoje que você deu a volta no centro, só que a localização expirou antes! Fiquei apavorado, porque a qualquer momento você poderia chegar, mas aí, graças à sua explicação de onde você iria descer do ônibus, eu consegui ficar esperto e te esperar no lugar certo, ao invés do outro lado da rua KKKkkkkkkkk.</p>
-
-  <p>E lá estava você, toda encolhida mexendo no celular, enquanto eu te mandava mensagem dizendo que já tinha te visto — só que você estava muito nervosa e muito tímida KKKKKKKKKKKKK. Até que você foi chegando mais perto e eu disse: <em>"Jessyca?"</em>. Você levantou a cabeça com uma cara assustada e disse: <em>"Que susto!"</em> KKKKKKKKKKKKKKKKKKK. Eu achei aquilo tão bonito, meu Deus! Só que você ainda estava muito tímida, eu tentava te alcançar o presente, mas você estava travada, sem saber como reagir, até que finalmente consegui te entregar na frente do colégio.</p>
-
-  <p>Ali a gente começou a conversar, você foi se soltando e, sinceramente, eu estava encantado com você: uma mulher tão linda, tão interessante, tão cheirosa... Eu nem acreditava direito que estava conversando com você kkkkkkkkk, que eu tinha conseguido finalmente te ver! Aí você falou sobre o seu curso, sobre você, sobre a sua formatura, e eu contava sobre mim, sobre o curso de programação, fazia umas piadas e você caía na gargalhada.</p>
-
-  <p>Até que, de repente, <strong>O SEU PAI PASSA NA FRENTE DO COLÉGIO!</strong> Naquela hora eu me apavorei — normalmente o pai morre de ciúmes da filha —, e quando me dei conta de que ele passou e me viu, pensei: <em>"Tô morto"</em> KKKKKKKKKKKKKKKKKKK (eu ainda rio muito quando lembro que ele me chamou de branquelo azedo KKKKKKKKKKKKKKKKKKKKKKK).</p>
-
-  <h3>O primeiro beijo</h3>
-  <p>Aí conversamos mais e mais e mais, até que deu a hora de você subir para a sala. Nossos rostos já estavam bem próximos, até que eu criei coragem e pensei: <em>"Ok, é agora, se eu não tomar uma atitude agora eu vou me arrepender amargamente"</em>. Então — <strong>BOOM!</strong> — nosso primeiro beijo. Amor, sério, eu fiquei alucinado! Senti como se a minha cabeça estivesse explodido, e a gente se beijou mais e mais e mais, até que realmente você precisou subir para o curso.</p>
-
-  <h3>Nosso começo</h3>
-  <p>A gente se despediu e eu fui para casa. Quando saí do colégio, saí saltitando! Eu estava extremamente feliz, era o homem mais feliz do planeta, mds KKKkkkkkk. E foi assim o nosso início, gatinha. A gente continuou conversando e, desde a primeira mensagem, nunca mais parou de se falar. Depois, no dia <time datetime="2026-06-25">25/06/2026</time>, veio finalmente o pedido de namoro, e desde então eu venho sendo o homem mais feliz do mundo todos os dias, vivendo momentos maravilhosos ao seu lado, amor.</p>
-
-  <p class="coracoes">❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️</p>
-  </section>
-  <section id="livro-secao">
-  <h2>Nosso álbum</h2>
-  <p class="dica">Toque na página para virar</p>
-
-  <div class="livro fechado" id="livro">
-
-    <!-- FOLHA 1: a frente é a capa, o verso é a foto 1 -->
-    <div class="folha">
-      <div class="face frente capa">
-        <h3>Nosso álbum</h3>
-        <p>♥</p>
-      </div>
-      <div class="face verso">
-        <img src="foto1.jpg" alt="Foto de nós dois">
-        <p>Nossa primeira viagem ❤️</p>
-      </div>
-    </div>
-
-    <!-- FOLHA 2: frente = foto 2, verso = foto 3 -->
-    <div class="folha">
-      <div class="face frente">
-        <img src="foto2.jpg" alt="Foto de nós dois">
-        <p></p>
-      </div>
-      <div class="face verso">
-        <img src="foto3.jpg" alt="Foto de nós dois">
-        <p></p>
-      </div>
-    </div>
-
-    <!-- FOLHA 3: frente = foto 4, verso = foto 5 -->
-    <div class="folha">
-      <div class="face frente">
-        <img src="foto4.jpg" alt="Foto de nós dois">
-        <p>Nossa primeira foto juntos ❤️</p>
-      </div>
-      <div class="face verso">
-        <img src="foto5.jpg" alt="Foto de nós dois">
-        <p>Nossa primeira vez no cinema juntos ❤️</p>
-      </div>
-    </div>
-
-    <!-- FOLHA 4: frente = foto 6, verso = contracapa -->
-    <div class="folha">
-      <div class="face frente">
-        <img src="foto6.jpg" alt="Foto de nós dois">
-        <p>Nossa filha kkkkk ❤️</p>
-      </div>
-      <div class="face verso capa">
-        <h3>Te amo</h3>
-        <p>♥</p>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="controles">
-    <button type="button" id="voltar">‹ Voltar</button>
-    <button type="button" id="avancar">Avançar ›</button>
-  </div>
-  </section>
-  <section>
-      <h2>Cartinha de amor</h2>
-      <p>Amor da minha vida, desde o dia que você chegou na minha vida, absolutamente tudo mudou, </p>
-  </section>
-
-
-  <script src="script.js"></script>
   <script>
-  const livro = document.getElementById("livro");
-  const folhas = document.querySelectorAll("#livro .folha");
-  let viradas = 0;   // quantas folhas já foram viradas
+    var D = { "s": "I0b1jaULBBGCbm8h4l1PBw==", "i": "kWjWNq2NmAcVgS6F", "c": "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", "n": 600000 };
+    function b64(t) { var b = atob(t); var u = new Uint8Array(b.length); for (var i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return u; }
+    function limpar(s) { return s.trim().toLowerCase(); }
 
-  // a ordem de empilhar: no começo a folha 1 fica por cima das outras
-  folhas.forEach(function (folha, i) {
-    folha.style.zIndex = folhas.length - i;
-  });
+    async function abrir(senha) {
+      var base = await crypto.subtle.importKey("raw", new TextEncoder().encode(limpar(senha)), "PBKDF2", false, ["deriveKey"]);
+      var chave = await crypto.subtle.deriveKey({ name: "PBKDF2", salt: b64(D.s), iterations: D.n, hash: "SHA-256" }, base, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
+      var claro = await crypto.subtle.decrypt({ name: "AES-GCM", iv: b64(D.i) }, chave, b64(D.c));
+      return new TextDecoder().decode(claro);
+    }
 
-  function atualizar() {
-    folhas.forEach(function (folha, i) {
-      if (i < viradas) {
-        folha.classList.add("virada");
-      } else {
-        folha.classList.remove("virada");
+    var campo = document.getElementById("s"), erro = document.getElementById("e"), botao = document.getElementById("b");
+    campo.focus();
+
+    document.getElementById("f").addEventListener("submit", async function (ev) {
+      ev.preventDefault();
+      if (!window.crypto || !crypto.subtle) { erro.textContent = "Abra este site por um endereço https."; return; }
+      botao.disabled = true; erro.textContent = "";
+      try {
+        var html = await abrir(campo.value);      // se a senha estiver errada, isto dá erro
+        document.open(); document.write(html); document.close();   // troca esta tela pelo site de verdade
+      } catch (x) {
+        erro.textContent = "Senha incorreta, tente de novo ♥";
+        campo.value = "";
+        campo.classList.remove("tremer"); void campo.offsetWidth; campo.classList.add("tremer");
+        campo.focus();
+        botao.disabled = false;
       }
-      // espera a folha chegar na metade do giro e só então troca a ordem de empilhar
-      setTimeout(function () {
-        folha.style.zIndex = i < viradas ? i : folhas.length - i;
-      }, 500);
     });
-
-    livro.classList.toggle("fechado", viradas === 0);
-    livro.classList.toggle("terminado", viradas === folhas.length);
-  }
-
-  // clicar numa folha: se ela já está virada, desvira; se não, vira
-  folhas.forEach(function (folha, i) {
-    folha.addEventListener("click", function () {
-      viradas = folha.classList.contains("virada") ? i : i + 1;
-      atualizar();
-    });
-  });
-
-  document.getElementById("avancar").addEventListener("click", function () {
-    if (viradas < folhas.length) viradas++;
-    atualizar();
-  });
-
-  document.getElementById("voltar").addEventListener("click", function () {
-    if (viradas > 0) viradas--;
-    atualizar();
-  });
-</script>
+  </script>
 </body>
+
 </html>
